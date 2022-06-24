@@ -15,6 +15,7 @@ import AppLoading from 'expo-app-loading';
 import theme from './src/global/styles/theme';
 
 import { Dashboard } from './src/screens/Dashboard';
+import { StatusBar } from 'react-native';
 
 export default function App(){
 

@@ -5,6 +5,8 @@ import {Feather} from '@expo/vector-icons';
 
 export const Container = styled.View`
     background-color: ${({theme}) => theme.colors.shape};
+
+
     width: ${RFValue(300)}px;
     border-radius: 5px;
 
