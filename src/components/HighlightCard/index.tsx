@@ -10,17 +10,44 @@ import {
     Transaction
 } from './styles';
 
-export function HighlightCard(){
+interface Props{
+    title: string;
+    amount: string;
+    transaction: string;
+    type: 'up'|'down'| 'total'
+}
+
+const icon = {
+    up: 'arrow-up-circle',
+    down: 'arrow-down-circle',
+    total:'dollar-sign'
+}
+
+export function HighlightCard({
+    type,
+    title,
+    amount,
+    transaction
+}: Props){
     return(
-        <Container>
+        <Container type={type}>
             <Header>
-                <Title>Entrada</Title>
-                <Icon name="arrow-up-circle"/>
+                <Title type={type}>
+                    {title}
+                </Title>
+                <Icon 
+                    name={icon[type]} 
+                    type={type}
+                />
             </Header>
 
             <Footer>
-                <Amount>R$ 17.400,00</Amount>
-                <Transaction>Última entrada dia 13 de abril</Transaction>
+                <Amount type={type}>
+                    {amount}
+                </Amount>
+                <Transaction type={type}>
+                    {transaction}
+                </Transaction>
             </Footer>
         </Container>
     );   
