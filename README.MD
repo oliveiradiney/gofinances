@@ -27,7 +27,11 @@ cd gofinances
 Instale as dependências necessárias
 
 ```
-sudo yarn install (ou npm i)
+sudo yarn install 
+```
+ou
+```
+sudo npm install 
 ```
 
 Inicie o expo
