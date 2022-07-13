@@ -8,6 +8,7 @@ export const Container = styled.View`
     border-radius: 5px;
 
     padding: 17px 24px;
+    margin-bottom: 16px;
 
 `;
 
@@ -50,4 +51,6 @@ export const CategoryName  = styled.Text`
 
 `;
 
-export const Date = styled.Text``;
+export const Date = styled.Text`
+    color:${({theme})=> theme.colors.text};
+`;
