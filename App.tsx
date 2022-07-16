@@ -15,7 +15,7 @@ import AppLoading from 'expo-app-loading';
 import theme from './src/global/styles/theme';
 
 import { Register } from './src/screens/Register';
-import { StatusBar } from 'react-native';
+
 
 export default function App(){
 
