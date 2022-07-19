@@ -12,6 +12,7 @@ import {
     Fields,
     TransactionsTypes
 }from './styles';
+import { CategorySelect } from "../../components/Forms/CategorySelect";
 
 
 
@@ -55,6 +56,10 @@ export function Register(){
                         isActive={transactionType === 'down'}
                     />
                 </TransactionsTypes>
+
+                <CategorySelect 
+                    title="Categoria"
+                />
                
             </Fields>
            
