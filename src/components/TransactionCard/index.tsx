@@ -9,7 +9,6 @@ import {
     Icon,
     CategoryName,
     Date
-
 } from './styles';
 
 

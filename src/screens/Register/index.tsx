@@ -75,7 +75,6 @@ export function Register(){
                     name="name"
                     control={control}
                     placeholder="Nome" 
-
                 />
 
                 <InputForm
