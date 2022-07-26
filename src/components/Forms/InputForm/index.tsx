@@ -13,7 +13,7 @@ import {
 interface Props extends TextInputProps{
     control: Control;
     name: string;
-    error: string;
+    error?: string;
 }
 
 export function InputForm({
@@ -35,7 +35,7 @@ export function InputForm({
                 )}
                 name={name}
             />
-           { error && <Error>{ error }</Error> }
+           <Error>{ error }</Error> 
         </Container>
     );
 }
