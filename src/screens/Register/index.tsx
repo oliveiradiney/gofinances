@@ -29,7 +29,7 @@ import {
 
 interface FormData {
   name: string;
-  amount: string;
+  amount: number;
 }
 
 const schema = Yup.object().shape({
@@ -55,7 +55,7 @@ export function Register() {
   const { 
     control, 
     handleSubmit,
-    formState: { errors }
+    formState:{errors}
   } = useForm({
     resolver: yupResolver(schema) 
   });   
