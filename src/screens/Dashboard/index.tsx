@@ -32,7 +32,7 @@ export function Dashboard(){
         title: "Desenvolvimento de site",
         amount: "R$ 12.000,00",
         category: {
-          name: "Vendas",
+          name: "Salário",
           icon: "dollar-sign",
         },
         date: "13/04/2020",
