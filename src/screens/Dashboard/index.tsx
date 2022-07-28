@@ -1,7 +1,8 @@
 import React from 'react';
 import { HighlightCard } from '../../components/HighlightCard';
 import { TransactionCard, TransactionCardProps } from '../../components/TransactionCard'
- 
+import { RectButton } from "react-native-gesture-handler";
+
 import { 
     Container, 
     Header,
@@ -15,7 +16,8 @@ import {
     HighlightCards,
     Transactions,
     Title,
-    TransactionsList
+    TransactionsList,
+    LogoutButton
     
 }from './styles';
 
@@ -75,7 +77,10 @@ export function Dashboard(){
                             <UserName>Diney</UserName>
                         </User>
                     </UserInfo>
-                    <Icon name="power" />
+                    <LogoutButton onPress={() => alert("logout")}>
+                        <Icon name="power" />
+                    </LogoutButton>
+                    
                 </UserWrapper>
             </Header>
 
