@@ -35,7 +35,7 @@ export function InputForm({
                 )}
                 name={name}
             />
-           <Error>{ error }</Error> 
+           {error && <Error>{ error }</Error> }
         </Container>
     );
 }

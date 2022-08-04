@@ -84,7 +84,7 @@ export function Register() {
     if(category.key === 'category')
         return Alert.alert('Selecione a categoria')
 
-    const data = {
+    const   newTransaction = {
       name: form.name,
       amount: form.amount,
       transactionType,
@@ -92,9 +92,14 @@ export function Register() {
     };
 
     try {
-      
-      await AsyncStorage.setItem(datakey, JSON.stringify(data));
+      const data = await AsyncStorage.getItem(datakey);
+      const currentData = data ? JSON.parse(data) : [];
 
+      const dataFormated = [
+        ...currentData,
+        newTransaction
+      ]
+      await AsyncStorage.setItem(datakey, JSON.stringify(dataFormated));
 
     } catch (error) {
       console.log(error)
@@ -105,6 +110,7 @@ export function Register() {
   useEffect(() =>{
     async function loadData(){
       const data = await AsyncStorage.getItem(datakey);
+      
       console.log(JSON.parse(data!));
     }
     loadData();
